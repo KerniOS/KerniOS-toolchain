@@ -1,3 +1,15 @@
+KerniOS toolchain
+
+We use the Linaro toolchain version 7.1, available here:
+
+https://snapshots.linaro.org/components/toolchain/gcc-linaro/7.1-2017.07/
+
+An old requirement from the iDroid/openiBoot project to compile their files is to compile mthumb-interwork into the toolchain.
+
+More later, when I get it to work
+
+-----------ORIGINAL FILE------------------------------------------------------------------
+
 How to build the toolchain
 --------------------------
 
