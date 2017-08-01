@@ -223,7 +223,8 @@ stage_gcc_configure() {
 	log ../gcc-7.1.0/configure --target=arm-elf --prefix=$PREFIX \
 			--enable-interwork --enable-multilib --with-fpu=vfp \
 			--enable-languages="c,c++" --with-newlib \
-			--with-headers=../newlib-2.5.0/newlib/libc/include --disable-werror
+			--with-headers=../newlib-2.5.0/newlib/libc/include --disable-werror \
+			--with-system-zlib
 	checkRet "Failed to configure gcc"
 }
 
