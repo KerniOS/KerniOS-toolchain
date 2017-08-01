@@ -16,12 +16,12 @@ fi
 
 # Package Verions
 PKG_NAMES[0]="binutils-2.29.tar.bz2"
-PKG_NAMES[1]="gcc-7.1.0.tar.bz2"
+PKG_NAMES[1]="gcc-linaro-snapshot-7.1-2017.07.tar.xz"
 PKG_NAMES[2]="newlib-2.5.0.tar.gz"
 
 # Package URLs
 PKG_URLS[0]="http://ftp.gnu.org/gnu/binutils/binutils-2.29.tar.bz2"
-PKG_URLS[1]="http://ftp.gnu.org/gnu/gcc/gcc-7.1.0/gcc-7.1.0.tar.bz2"
+PKG_URLS[1]="https://snapshots.linaro.org/components/toolchain/gcc-linaro/7.1-2017.07/gcc-linaro-snapshot-7.1-2017.07.tar.xz"
 PKG_URLS[2]="ftp://sourceware.org/pub/newlib/newlib-2.5.0.tar.gz"
 
 # Package Patches
