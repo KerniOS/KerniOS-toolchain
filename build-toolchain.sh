@@ -19,6 +19,11 @@ PKG_NAMES[0]="binutils-2.29.tar.bz2"
 PKG_NAMES[1]="gcc-linaro-snapshot-7.1-2017.07.tar.xz"
 PKG_NAMES[2]="newlib-2.5.0.tar.gz"
 
+#Package Names
+PKG_DIRNAME[0]="binutils-2.29"
+PKG_DIRNAME[1]="gcc-linaro-snapshot-7.1-2017.07"
+PKG_DIRNAME[2]="newlib-2.5.0"
+
 # Package URLs
 PKG_URLS[0]="http://ftp.gnu.org/gnu/binutils/binutils-2.29.tar.bz2"
 PKG_URLS[1]="https://snapshots.linaro.org/components/toolchain/gcc-linaro/7.1-2017.07/gcc-linaro-snapshot-7.1-2017.07.tar.xz"
@@ -177,7 +182,7 @@ stage_binutils_extract() {
 stage_binutils_configure() {
 	echo "- Configuring binutils"
 	cd $TOOLCHAIN_PATH/binutils-build
-	log ../binutils-2.29/configure --target=arm-elf --prefix=$PREFIX \
+	log ../${PKG_DIRNAME[0]}/configure --target=arm-elf --prefix=$PREFIX \
 			--enable-interwork --enable-multilib --disable-werror
 	checkRet "Failed to configure binutils"
 }
@@ -220,7 +225,7 @@ stage_gcc_patch() {
 stage_gcc_configure() {
 	echo "- Configuring GCC"
 	cd $TOOLCHAIN_PATH/gcc-build
-	log ../gcc-7.1.0/configure --target=arm-elf --prefix=$PREFIX \
+	log ../${PKG_DIRNAME[1]}/configure --target=arm-elf --prefix=$PREFIX \
 			--enable-interwork --enable-multilib --with-fpu=vfp \
 			--enable-languages="c,c++" --with-newlib \
 			--with-headers=../newlib-2.5.0/newlib/libc/include --disable-werror \
@@ -252,7 +257,7 @@ stage_newlib_patch() {
 stage_newlib_configure() {
 	echo "- Configuring Newlib"
 	cd $TOOLCHAIN_PATH/newlib-build
-	log ../newlib-2.5.0/configure --target=arm-elf --prefix=$PREFIX \
+	log ../${PKG_DIRNAME[2]}/configure --target=arm-elf --prefix=$PREFIX \
 		--enable-interwork --enable-multilib --disable-werror
 	checkRet "Failed to configure newlib"
 }
