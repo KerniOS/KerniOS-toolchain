@@ -2,6 +2,7 @@
 
 #
 # OpeniBoot Toolchain builder
+# Modified for KerniOS
 #
 
 #########  Setup Variables  ###########
