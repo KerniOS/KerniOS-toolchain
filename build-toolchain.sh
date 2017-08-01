@@ -170,7 +170,7 @@ stage_download() {
 stage_binutils_extract() {
 	echo "- Extracting binutils"
 	cd $TOOLCHAIN_PATH
-	log tar -jxvf $TOOLCHAIN_PATH/src/${PKG_NAMES[0]}
+	log tar xf $TOOLCHAIN_PATH/src/${PKG_NAMES[0]}
 	checkRet "Failed to extract package ${PKG_NAMES[0]}"
 }
 
@@ -199,14 +199,14 @@ stage_binutils_install() {
 stage_gcc_extract() {
 	echo "- Extracting GCC"
 	cd $TOOLCHAIN_PATH
-	log tar -jxvf $TOOLCHAIN_PATH/src/${PKG_NAMES[1]}
+	log tar xf $TOOLCHAIN_PATH/src/${PKG_NAMES[1]}
 	checkRet "Failed to extract package ${PKG_NAMES[1]}"
 }
 
 stage_newlib_extract() {
 	echo "- Extracting Newlib dependency for gcc"
 	cd $TOOLCHAIN_PATH
-	log tar -zxvf $TOOLCHAIN_PATH/src/${PKG_NAMES[2]}
+	log tar xf $TOOLCHAIN_PATH/src/${PKG_NAMES[2]}
 	checkRet "Failed to extract package ${PKG_NAMES[2]}"
 }
 
