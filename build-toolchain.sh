@@ -256,7 +256,7 @@ stage_newlib_patch() {
 stage_newlib_configure() {
 	echo "- Configuring Newlib"
 	cd $TOOLCHAIN_PATH/newlib-build
-	log ../${PKG_DIRNAME[2]}/configure --target=arm-elf --prefix=$PREFIX \
+	log ../${PKG_DIRNAME[2]}/configure --target=arm-eabi --prefix=$PREFIX \
 		--enable-interwork --enable-multilib --disable-werror
 	checkRet "Failed to configure newlib"
 }
@@ -264,7 +264,7 @@ stage_newlib_configure() {
 stage_makesymlink() {
 	echo "- Making arm-elf-cc symlink"
 	cd $TOOLCHAIN_PATH/newlib-build
-	ln -s arm-elf-gcc $PREFIX/bin/arm-elf-cc
+	ln -s arm-eabi-gcc $PREFIX/bin/arm-eabi-cc
 	checkRet "Failed to create symlink"
 }
 
