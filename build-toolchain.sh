@@ -31,8 +31,7 @@ PKG_URLS[2]="ftp://sourceware.org/pub/newlib/newlib-2.5.0.tar.gz"
 
 # Package Patches
 PATCH_GCC411_ARMELF="t-arm-elf.patch"
-#Hopefully no longer needed:
-#PATCH_NEWLIB_MAKEINFO="newlib-1.14.0-missing-makeinfo.patch" 
+PATCH_NEWLIB_MAKEINFO="newlib-1.14.0-missing-makeinfo.patch" 
 
 
 
