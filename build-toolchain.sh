@@ -323,7 +323,7 @@ msg "Completed GCC Part 1"
 
 msg "Starting Newlib"
 
-stage newlib_patch
+#stage newlib_patch
 stage newlib_configure
 
 stage makesymlink
