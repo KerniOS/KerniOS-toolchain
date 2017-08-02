@@ -1,5 +1,5 @@
---- newlib-1.14.0-bak/configure 2008-06-10 20:49:16.918036351 +0200
-+++ newlib-1.14.0/configure     2008-06-10 21:21:35.750035824 +0200
+--- newlib-2.5.0-bak/configure 2008-06-10 20:49:16.918036351 +0200
++++ newlib-2.5.0/configure     2008-06-10 21:21:35.750035824 +0200
 @@ -3542,7 +3542,7 @@
      # For an installed makeinfo, we require it to be from texinfo 4.2 or
      # higher, else we use the "missing" dummy.
