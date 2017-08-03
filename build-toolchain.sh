@@ -181,7 +181,7 @@ stage_binutils_extract() {
 stage_binutils_configure() {
 	echo "- Configuring binutils"
 	cd $TOOLCHAIN_PATH/binutils-build
-	log ../${PKG_DIRNAME[0]}/configure --target=arm-elf --prefix=$PREFIX \
+	log ../${PKG_DIRNAME[0]}/configure --target=arm-eabi --prefix=$PREFIX \
 			--enable-interwork --enable-multilib --disable-werror
 	checkRet "Failed to configure binutils"
 }
@@ -225,7 +225,7 @@ stage_gcc_configure() {
 	echo "- Configuring GCC"
 	cd $TOOLCHAIN_PATH/gcc-build
 	log ../${PKG_DIRNAME[1]}/configure --target=arm-eabi --prefix=$PREFIX \
-			--enable-interwork --enable-multilib --with-fpu=vfp \
+			--enable-interwork --enable-multilib --with-fpu=vfpv2 \
 			--enable-languages="c,c++" --with-newlib \
 			--with-headers=../newlib-2.5.0/newlib/libc/include --disable-werror \
 			--with-system-zlib
