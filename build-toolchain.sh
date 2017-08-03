@@ -257,7 +257,8 @@ stage_newlib_configure() {
 	echo "- Configuring Newlib"
 	cd $TOOLCHAIN_PATH/newlib-build
 	log ../${PKG_DIRNAME[2]}/configure --target=arm-eabi --prefix=$PREFIX \
-		--enable-interwork --enable-multilib --disable-werror
+		--enable-interwork --enable-multilib --disable-werror \
+		--with-system-zlib
 	checkRet "Failed to configure newlib"
 }
 
